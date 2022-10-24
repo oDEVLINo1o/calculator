@@ -38,10 +38,6 @@ function input(x) {
 
             document.getElementById("decimalVar").value = decimalCount;
         }
-}
-
-
-
 
    /* if (document.getElementById("result").value == 0)
         {
@@ -51,7 +47,10 @@ function input(x) {
         {
             document.getElementById("result").value += x;
         }*/
+}
+
 function decimalPoint() {
+
     if (document.getElementById("decimalVar").value == 0)//This prevents multiple decimal points
         {
             document.getElementById("decimalVar").value = 1;
