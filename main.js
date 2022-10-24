@@ -23,7 +23,7 @@ function input(x) {
         {
             let decimalCount = parseInt(document.getElementById("decimalVar").value);
 
-            if (decimalCount == 1) 
+           if (decimalCount == 1) 
                 {
                     x *= 1/10;//We are using math to place the decimal point
                     y += x;
@@ -39,14 +39,6 @@ function input(x) {
             document.getElementById("decimalVar").value = decimalCount;
         }
 
-   /* if (document.getElementById("result").value == 0)
-        {
-            document.getElementById("result").value = x;
-        }
-    else 
-        {
-            document.getElementById("result").value += x;
-        }*/
 }
 
 function decimalPoint() {
@@ -56,10 +48,10 @@ function decimalPoint() {
             document.getElementById("decimalVar").value = 1;
         }
 
-    if (parseInt(document.getElementById("operation").value))//If this is an empty string. It will return false
+   /* if (parseInt(document.getElementById("operation").value))//If this is an empty string. It will return false
         {
             document.getElementById("result").value = 0;
-        }
+        }*/
 }
 
 function operandCheck() {
@@ -124,7 +116,7 @@ function operator(x) {
             document.getElementById("operation").value = 4;//Devision
             break;
     }
-
+    document.getElementById("decimalVar").value = 0;
     operandCheck();
 }
 
@@ -134,6 +126,7 @@ function equals() {
     document.getElementById("result").value = document.getElementById("operand").value;
     document.getElementById("operand").value = "";
     document.getElementById("equivalent").value = 1;
+    document.getElementById("decimalVar").value = 0;
 
 }
 
@@ -143,6 +136,7 @@ function allClear() {
     document.getElementById("operand").value = "";
     document.getElementById("operation").value = 0;
     document.getElementById("equivalent").value = 0;
+    document.getElementById("decimalVar").value = 0;
 }
 
 function plusminus() {
