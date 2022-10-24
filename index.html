@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        
+        
+        <link rel="stylesheet" href="css/calculator.css">
+
+        
+        <script src="./main.js"></script><!--This calls the external calculator js code-->
+    
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Basic Calculator</h1>
+        </header>
+
+
+        <nav>
+        </nav>
+
+        <main>
+            <!-- These hidden inputs contain data we dont want to show on the screen -->
+            <input id="operation" value="0" type="hidden">
+            <!-- This will store the first number typed in -->
+            <input id="operand" value="" type="hidden">
+            <input id="equivalent" value="0" type="hidden">
+            <input id="decimalVar" value="0" type="hidden">
+
+            <!-- I used a table for the layout of the calculator -->
+            <table>
+                <!-- I have used a text input for the calculator screen -->
+                <caption><input id="result" type="text" value="0" readonly></caption>
+
+                <tr>
+                    <!-- Top row of buttons -->
+                    <td><input class="buttons" id="allclear" value="ac" type="button" onclick="allClear()"></td>
+                    <td><input class="buttons" id="square" value="x&sup2;" type="button" onclick="square()"></td>
+                    <td><input class="buttons" id="percent" value="%" type="button" onclick="percent()"></td>
+                    <td><input class="buttons" id="devide" value="&divide;" type="button" onclick="operator(4)"></td>
+                </tr>
+
+                <tr>
+                    <!-- Second from the top -->
+                    <td><input class="buttons" id="seven" value="7" type="button" onclick="input(7)"></td>
+                    <td><input class="buttons" id="eight" value="8" type="button" onclick="input(8)"></td>
+                    <td><input class="buttons" id="nine" value="9" type="button" onclick="input(9)"></td>
+                    <td><input class="buttons" id="multiply" value="&times;" type="button" onclick="operator(3)"></td>
+                </tr>
+
+                <tr>
+                    <!-- Middle row -->
+                    <td><input class="buttons" id="four" value="4" type="button" onclick="input(4)"></td>
+                    <td><input class="buttons" id="five" value="5" type="button" onclick="input(5)"></td>
+                    <td><input class="buttons" id="six" value="6" type="button" onclick="input(6)"></td>
+                    <td><input class="buttons" id="subtract" value="-" type="button" onclick="operator(2)"></td>
+                </tr>
+
+                <tr>
+                    <!-- second from the bottom -->
+                    <td><input class="buttons" id="one" value="1" type="button" onclick="input(1)"></td>
+                    <td><input class="buttons" id="two" value="2" type="button" onclick="input(2)"></td>
+                    <td><input class="buttons" id="three" value="3" type="button" onclick="input(3)"></td>
+                    <td><input class="buttons" id="add" value="&plus;" type="button" onclick="operator(1)"></td>
+                </tr>
+
+                <tr>
+                    <!-- Bottom row of buttons -->
+                    <td><input class="buttons" id="plusminus" value="&plusmn;" type="button" onclick="plusminus()"></td>
+                    <td><input class="buttons" id="zero" value="0" type="button" onclick="input(0)"></td>
+                    <td><input class="buttons" id="decimal" value="." type="button" onclick="decimalPoint()"></td>
+                    <td><input class="buttons" id="equals" value="=" type="button" onclick="equals()"></td>
+                </tr>
+            </table>
+        </main>
+
+        <footer>
+            
+            <!--The href below will allow the user of the site to click on the link to send an email-->
+            <p>Email Us At:<br><a href="mailto:oDEVLINo1o@hotmail.com">oDEVLINo1o@hotmail.com</a></p>
+        </footer>
+
+    </body>
+</html>
